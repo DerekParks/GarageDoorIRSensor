@@ -1,0 +1,29 @@
+# Had to make these entries in the configuration.yaml since I couldn't get auto disc working
+
+cover:
+  - platform: mqtt
+    name: Garage Door North
+    unique_id: "garge_door_north_1234"
+    state_topic: "home/garageNorth/state"
+    availability_topic: "home/garageNorth/avail"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    state_opening: opening
+    state_closing: closing
+    state_open: open
+    state_closed: closed
+    qos: 1
+    retain: true
+  - platform: mqtt
+    name: Garage Door South
+    unique_id: "garge_door_south_5678"
+    state_topic: "home/garageSouth/state"
+    availability_topic: "home/garageSouth/avail"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    state_opening: opening
+    state_closing: closing
+    state_open: open
+    state_closed: closed
+    qos: 1
+    retain: true

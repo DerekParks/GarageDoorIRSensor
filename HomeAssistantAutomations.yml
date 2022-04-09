@@ -1,0 +1,34 @@
+# I made these in the UI but saving for posterity
+- id: someid123
+  alias: Notify me on garage door alert
+  trigger:
+  - platform: mqtt
+    topic: home/garageSouth/alert
+    encoding: utf-8
+  action:
+  - service: notify.mobile_app_my_phone
+    data:
+      message: South garge door is open.
+      title: Garage Door Open
+  - service: notify.pushover
+    data:
+      message: South garge door is open.
+      title: Garage Door Open
+- id: someid456
+  alias: Notify me on garage door alert (North)
+  description: ''
+  trigger:
+  - platform: mqtt
+    topic: home/garageNorth/alert
+    encoding: utf-8
+  condition: []
+  action:
+  - service: notify.mobile_app_my_phone
+    data:
+      message: North garge door is open.
+      title: Garage Door Open
+  - service: notify.pushover
+    data:
+      message: North garge door is open.
+      title: Garage Door Open
+  mode: single
