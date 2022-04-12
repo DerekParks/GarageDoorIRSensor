@@ -1,4 +1,5 @@
 # I made these in the UI but saving for posterity
+# Yes, having both HA and PushOver Notifications is belt & suspenders 
 - id: someid123
   alias: Notify me on garage door alert
   trigger:
