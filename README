@@ -5,7 +5,7 @@ This is a little garage door state sensor based on Sharp IR sensors, an ADS1115,
 The boards were made for a CT clamp current sensor but work great for reading in any voltage from 0-3.3v.
 
  A schematic is below. The IR sensors hook up to ports 3  & 4 of the ADS1115.
-![Schematic](./img/V1CurrentSensor.png)
+![Schematic](img/V1CurrentSensor.png)
 
 The IR sensors need to be placed between the garage door rail and the wall (see pictures below). When the door is down, the sensors should read around 1.5 volts and near-zero when the door is up.
 
