@@ -9,11 +9,11 @@ The boards were made for a CT clamp current sensor but work great for reading in
 
 The IR sensors need to be placed between the garage door rail and the wall (see pictures below). When the door is down, the sensors should read around 1.5 volts and near-zero when the door is up.
 
-![alt text](img/overview.jpg "Overview")
+[Overview](img/overview.jpg)
 
-![alt text](img/sensor1.jpg "Looking in at sensor with door up")
-![alt text](img/sensor2.jpg "Looking out at door with door up")
-![alt text](img/sensor3.jpg "Looking out at door with door closed")
+[Looking in at sensor with door up](img/sensor1.jpg)
+[Looking out at door with door up](img/sensor2.jpg)
+[Looking out at door with door closed](img/sensor3.jpg)
 
 
 ## Home assistant 
