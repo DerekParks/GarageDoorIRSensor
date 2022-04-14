@@ -11,17 +11,17 @@
 #define OPEN_DOOR_ALERT 600000            // Send message to alert topic after 10 min
 #define MOVING_DOOR_MILLS 6000            // How long does it take the door to open/close
 #define FORCE_REFRESH_EVERY_MILLS 600000  // How often should we refresh mqtt (useful if we don't want to deal with mqtt retain but still want to get state updated after an HA reboot)
-#define CUT_OFF_VOLTAGE 0.9               // What voltage from the IR senor should be the cuttoff between open and closed
+#define CUT_OFF_VOLTAGE 0.9               // What voltage from the IR sensor should be the cuttoff between open and closed
 
 
 // WebSerial can be useful for in situ debuging 
 
-#define USE_WEBSERIAL false
+//#define USE_WEBSERIAL false
 
 #ifdef USE_WEBSERIAL
 
-#include <WebSerialPro.h>
-#define S WebSerialPro
+#include <WebSerial.h>
+#define S WebSerial
 
 AsyncWebServer server(80);
 
@@ -80,7 +80,7 @@ int16_t measureCount = 0;
 // Possible door states
 enum DoorState {closed, opening, open, closing};
 
-// Assume closed to start but should matter
+// Assume closed to start but shouldn't matter
 DoorState s1 = closed;
 DoorState s2 = closed;
 
@@ -181,8 +181,9 @@ void setup() {
 
 #ifdef USE_WEBSERIAL
   WebSerialPro.begin(&server);
-#else
   server.begin();
+#else
+  
 #endif
 
   // Say we are Offline until we have meassure state
